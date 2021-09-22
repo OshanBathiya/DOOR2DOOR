@@ -26,7 +26,7 @@ public class CartActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        NextProccessBtn = (Button) findViewById(R.id.next_btn);
+        //NextProccessBtn = (Button) findViewById(R.id.next_btn);
         txtTotalAmount = (TextView) findViewById(R.id.total_amount);
 
     }
