@@ -33,8 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height ="match_parent"
         android:layout_below="@+id/rll1"
-        android:layout_above ="@+id/next_process_btn"
-        >
+        android:layout_above ="@+id/next_process_btn">
 
     </androidx.recyclerview.widget.RecyclerView>
 

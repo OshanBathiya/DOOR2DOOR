@@ -67,8 +67,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent intent = new Intent(HomeActivity.this, CartActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -151,6 +151,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
+    public boolean onCreateOptinalMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.home, menu);
+        return true;
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
@@ -171,13 +176,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_home)
+        if (id == R.id.nav_cart)
         {
-
-        }
-        else if (id == R.id.nav_cart)
-        {
-
+            Intent intent = new Intent(HomeActivity.this, CartActivity.class);
+            startActivity(intent);
         }
         else if (id == R.id.nav_order)
         {
