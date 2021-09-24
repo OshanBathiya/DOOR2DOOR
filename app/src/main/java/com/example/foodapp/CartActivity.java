@@ -52,8 +52,7 @@ public class CartActivity extends AppCompatActivity {
         FirebaseRecyclerOptions<Cart> options =
                 new FirebaseRecyclerOptions.Builder<Cart>()
                 .setQuery(cartListRef.child("User View")
-                        .child(Prevalent.currentOnlineUser.getPhone())
-                        .child("food"),Cart.class)
+                        .child(Prevalent.currentOnlineUser.getPhone()),Cart.class)
                         .build();
 
         FirebaseRecyclerAdapter<Cart, CartViewHolder> adapter
@@ -61,8 +60,8 @@ public class CartActivity extends AppCompatActivity {
             @Override
             protected void onBindViewHolder(@NonNull CartViewHolder holder, int position, @NonNull Cart model)
             {
-                holder.txtProductQuantity.setText("Quantity = "+model.getQuantity());
-                holder.txtProductPrice.setText("Price = LKR "+model.getPrice());
+                holder.txtProductQuantity.setText("Quantity = " + model.getQuantity());
+                holder.txtProductPrice.setText("Price = LKR " + model.getPrice());
                 holder.txtProductName.setText(model.getName());
             }
 
@@ -70,10 +69,9 @@ public class CartActivity extends AppCompatActivity {
             @Override
             public CartViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
             {
-               View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cart_item_layout,parent,false);
-               AtomicReference<CartViewHolder> holder = new AtomicReference<>(new CartViewHolder(view));
-                CartViewHolder cartViewHolder = holder.get();
-                return cartViewHolder;
+               View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cart_item_layout, parent,false);
+                CartViewHolder holder = new CartViewHolder(view);
+                return holder;
             }
         };
 

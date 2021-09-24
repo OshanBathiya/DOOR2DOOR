@@ -80,7 +80,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
 
         final HashMap<String, Object> cartMap = new HashMap<>();
         cartMap.put("ItemKey", ItemKey);
-        cartMap.put("pname", productName.getText().toString());
+        cartMap.put("name", productName.getText().toString());
         cartMap.put("price", productPrice.getText().toString());
         cartMap.put("date", saveCurrentDate);
         cartMap.put("time", saveCurrentTime);
@@ -88,7 +88,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
         cartMap.put("discount", "");
 
         CartListRef.child("User View").child(Prevalent.currentOnlineUser.getPhone())
-                .child("foods").child(ItemKey)
+                .child(ItemKey)
                 .updateChildren(cartMap)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
@@ -97,7 +97,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
                         if(task.isSuccessful())
                         {
                             CartListRef.child("Admin View").child(Prevalent.currentOnlineUser.getPhone())
-                                    .child("foods").child(ItemKey)
+                                    .child(ItemKey)
                                     .updateChildren(cartMap)
                                     .addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
