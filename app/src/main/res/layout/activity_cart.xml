@@ -37,6 +37,26 @@
 
     </androidx.recyclerview.widget.RecyclerView>
 
+
+    <Button
+        android:id="@+id/proceed_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_alignBottom="@+id/cart_list"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/buttons"
+        android:text="PROCEED"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
     <Button
         android:id="@+id/next_process_btn"
         android:layout_width="wrap_content"
@@ -50,11 +70,11 @@
         android:layout_marginLeft="40dp"
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/buttons"
         android:text="Next"
-        android:textSize="20dp"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:textSize="20dp" />
 
 
 </RelativeLayout>
