@@ -11,8 +11,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:replace="android:theme">
-        <activity android:name=".ConfirmFinalOrderActivity"/>
-        <activity android:name=".CartActivity"></activity>
+        <activity android:name=".OrdersActivity"></activity>
+        <activity android:name=".PaymentActivity" />
+        <activity android:name=".ConfirmFinalOrderActivity" />
+        <activity android:name=".CartActivity" />
         <activity android:name=".ProductDetailsActivity" />
         <activity
             android:name=".HomeActivity"

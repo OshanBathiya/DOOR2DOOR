@@ -151,7 +151,7 @@ public class AdminNewOrdersActivity extends AppCompatActivity
             userTotalPrice = itemView.findViewById(R.id.order_total_price);
             userDateTime = itemView.findViewById(R.id.order_date_time);
             userShippingAddress = itemView.findViewById(R.id.order_address_city);
-            ShowOrdersBtn = itemView.findViewById(R.id.show_all_products_btn);
+         //   ShowOrdersBtn = itemView.findViewById(R.id.show_all_products_btn);
         }
     }
 

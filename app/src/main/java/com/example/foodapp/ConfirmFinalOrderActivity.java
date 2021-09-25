@@ -11,10 +11,12 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.foodapp.Prevalent.Prevalent;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.FirebaseDatabase;
-import com.example.foodapp.Prevalent.Prevalent;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -27,7 +29,7 @@ public class ConfirmFinalOrderActivity<DatabaseReference> extends AppCompatActiv
     private Button paymentBtn;
 
     private String totalAmount = "";
-    private Object Prevalent;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -48,6 +50,7 @@ public class ConfirmFinalOrderActivity<DatabaseReference> extends AppCompatActiv
         addressEditText = (EditText) findViewById(R.id.shipment_address);
         cityEditText = (EditText) findViewById(R.id.shipment_city);
         paymentBtn = (Button) findViewById(R.id.payment_btn);
+
 
 
         paymentBtn.setOnClickListener(new View.OnClickListener() {
@@ -114,7 +117,7 @@ public class ConfirmFinalOrderActivity<DatabaseReference> extends AppCompatActiv
         SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss a");
         saveCurrentTime = currentDate.format(calForDate.getTime());
 
-       final DatabaseReference ordersRef = FirebaseDatabase.getInstance().getReference()
+       final DatabaseReference ordersRef = (DatabaseReference) FirebaseDatabase.getInstance().getReference()
                .child("Orders")
                .child(Prevalent.currentOnlineUser.getPhone());
 
@@ -140,23 +143,26 @@ public class ConfirmFinalOrderActivity<DatabaseReference> extends AppCompatActiv
                           .child("User View")
                           .child(Prevalent.currentOnlineUser.getPhone())
                           .removeValue()
-                          .addOnCanceledListener(new OnCompleteListener<Void>(){
+                          .addOnCompleteListener(new OnCompleteListener<Void>() {
                               @Override
-                              public void onComplete(@NonNull Task<Void> task)
-                              {
+                              public void onComplete(@NonNull @NotNull Task<Void> task) {
                                   if (task.isSuccessful())
                                   {
                                       Toast.makeText(ConfirmFinalOrderActivity.this, "your final order has placed successfully.", Toast.LENGTH_SHORT).show();
 
 
-                                      Intent intent = new Intent(ConfirmFinalOrderActivity.this, HomeActivity.class);
+                                      Intent intent = new Intent(ConfirmFinalOrderActivity.this, OrdersActivity.class);
                                       intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                       startActivity(intent);
                                       finish();
-                                  }
 
+                                  }
                               }
                           });
+
+
+
+
 
               }
 
