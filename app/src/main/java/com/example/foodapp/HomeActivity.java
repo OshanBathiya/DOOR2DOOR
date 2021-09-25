@@ -189,7 +189,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         }
         else if (id == R.id.nav_profile)
         {
-
+            Intent intent = new Intent(HomeActivity.this, profileadd.class);
+            startActivity(intent);
         }
         else if (id == R.id.nav_logout)
         {
@@ -208,5 +209,4 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 }
 
 
-    }
-}
+
