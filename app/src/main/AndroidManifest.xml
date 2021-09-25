@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:replace="android:theme">
+        <activity android:name=".ConfirmFinalOrderActivity"/>
         <activity android:name=".CartActivity"></activity>
         <activity android:name=".ProductDetailsActivity" />
         <activity
@@ -27,6 +28,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_qsxL2mujQZRrbI" />
     </application>
 
 </manifest>
