@@ -12,11 +12,11 @@
         <activity android:name=".AdminRegister"/>
         <activity android:name=".AdminLogin"/>
         <activity android:name=".adddata"/>
-        <activity android:name=".MainActivity1"/>
         <activity android:name=".AdminMain"/>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity1"/>
         <activity android:name=".profileadd"/>
-        <activity android:name=".profilemain">
+        <activity android:name=".profilemain"/>
+            <activity android:name=".MainActivity">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
