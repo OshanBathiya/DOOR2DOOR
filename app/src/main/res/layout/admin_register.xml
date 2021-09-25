@@ -4,20 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E7D921"
-    tools:context=".RegisterActivity">
+    android:background="#FFEB3B"
+    tools:context=".AdminRegister">
 
     <ImageView
         android:id="@+id/register_applogo"
-        android:layout_width="match_parent"
-        android:layout_height="231dp"
+        android:layout_width="379dp"
+        android:layout_height="203dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="-2dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginRight="13dp"
-        android:src="@drawable/main" />
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:src="@drawable/admin1" />
 
     <EditText
         android:id="@+id/register_username_input"
@@ -112,6 +112,7 @@
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="21sp" />
+
 
 
 </RelativeLayout>
