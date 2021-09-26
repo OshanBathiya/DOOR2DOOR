@@ -31,7 +31,6 @@
         <activity android:name=".OrdersActivity"></activity>
         <activity android:name=".PaymentActivity" />
         <activity android:name=".ConfirmFinalOrderActivity" />
-        <activity android:name=".CartActivity" />
         <activity android:name=".ProductDetailsActivity" />
         <activity
             android:name=".HomeActivity"
@@ -48,9 +47,7 @@
         </intent-filter>
     </activity>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+
 
         <meta-data
             android:name="com.razorpay.ApiKey"

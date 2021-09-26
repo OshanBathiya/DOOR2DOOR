@@ -42,7 +42,7 @@ public class ConfirmFinalOrderActivity<DatabaseReference> extends AppCompatActiv
         Object obj = getIntent().getSerializableExtra("item");
 
         totalAmount = getIntent().getStringExtra( "Total Price");
-        Toast.makeText(this, "Total Price = $ " + totalAmount, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Total Price = LKR " + totalAmount, Toast.LENGTH_SHORT).show();
 
         confirmOrderBtn = (Button) findViewById(R.id.confirm_final_order_btn);
         nameEditText = (EditText) findViewById(R.id.shipment_name);
@@ -58,9 +58,9 @@ public class ConfirmFinalOrderActivity<DatabaseReference> extends AppCompatActiv
             public void onClick(View view)
             {
                 double amount = 0.0;
-                if (obj instanceof AdminNewOrdersActivity) {
-                    AdminNewOrdersActivity adminNewOrdersActivity = (AdminNewOrdersActivity) obj;
-                    adminNewOrdersActivity.getPrice();
+                if (obj instanceof OrdersActivity) {
+                    OrdersActivity ordersActivity = (OrdersActivity) obj;
+                    ordersActivity.getPrice();
                 }
                 Intent intent = new Intent(ConfirmFinalOrderActivity.this,PaymentActivity.class);
                 intent.putExtra("amount",amount);
