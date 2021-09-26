@@ -161,5 +161,6 @@ public class AdminNewOrdersActivity extends AppCompatActivity
     }
 
 
-
+    public class OrdresViewHolder {
+    }
 }
