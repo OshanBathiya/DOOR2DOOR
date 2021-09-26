@@ -1,11 +1,5 @@
 package com.example.foodapp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,6 +10,12 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.foodapp.Model.Cart;
 import com.example.foodapp.Prevalent.Prevalent;
 import com.example.foodapp.ViewHolder.CartViewHolder;
@@ -25,10 +25,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import org.jetbrains.annotations.NotNull;
-
-import java.util.concurrent.atomic.AtomicReference;
 
 public class CartActivity extends AppCompatActivity {
 
@@ -54,13 +50,13 @@ public class CartActivity extends AppCompatActivity {
         proceedBtn = (Button) findViewById(R.id.proceed_btn);
         txtTotalAmount = (TextView) findViewById(R.id.total_amount);
 
-        proceedBtn.setOnClickListener(new View.OnClickListener() {
+        NextProccessBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
             {
                 txtTotalAmount.setText("Total Price = LKR " + String.valueOf(overTotalPrice));
 
-               Intent intent = new Intent(CartActivity.this, CartActivity.class);
+               Intent intent = new Intent(CartActivity.this, ConfirmFinalOrderActivity.class);
                intent.putExtra("Total Price", String.valueOf(overTotalPrice));
                startActivity(intent);
                finish();
