@@ -2,7 +2,7 @@
 
 This is a food ordering Mobile application. This is an Anroid application which is deleveloped by using Java and Firebase database.
 The actions of the food delivery process are managed by this application.
-created a fun mobile app to maintain a good working relationship between buyers and merchants.Data was stored using Java, Android Studio, and Firebase.
+created a fun mobile app to maintain a good working relationship between buyers and merchants.
 successfully created a user-friendly mobile application that preserves a good rapport between customers and merchants. This application has been developed to oversee all aspects of the food delivery process. 
 The application was built in Java and the Android studio environment utilizing the Firebase database.
 
